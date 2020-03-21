@@ -1,0 +1,11 @@
+en:
+  books:
+    index:
+      title: Books
+      confirm:
+        destroy: Are you sure?
+    new:
+      title: New Book
+    edit:
+      title: Editing Book
+

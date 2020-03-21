@@ -1,0 +1,17 @@
+en:
+  dictionary:
+    new_book: New Book
+    show: Show
+    edit: Edit
+    destroy: Destroy
+    back: Back
+  flash:
+    notice:
+      crate: Book was successfully created.
+      update: Book was successfully updated.
+      destroy: Book was successfully destroyed.
+  helpers:
+    submit:
+      create: Create
+      submit: Submit
+      update: Update
