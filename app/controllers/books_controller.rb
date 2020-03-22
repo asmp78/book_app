@@ -4,13 +4,11 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
-  # GET /books.json
   def index
     @books = Book.all
   end
 
   # GET /books/1
-  # GET /books/1.json
   def show
   end
 
@@ -24,7 +22,6 @@ class BooksController < ApplicationController
   end
 
   # POST /books
-  # POST /books.json
   def create
     @book = Book.new(book_params)
     if @book.save
@@ -35,7 +32,6 @@ class BooksController < ApplicationController
   end
 
   # PATCH/PUT /books/1
-  # PATCH/PUT /books/1.json
   def update
     if @book.update(book_params)
       redirect_to @book, notice: t("flash.notice.update")
@@ -45,7 +41,6 @@ class BooksController < ApplicationController
   end
 
   # DELETE /books/1
-  # DELETE /books/1.json
   def destroy
     @book.destroy
     redirect_to books_url, notice: t("flash.notice.destroy")
