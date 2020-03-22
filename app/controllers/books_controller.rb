@@ -28,9 +28,9 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      format.html { redirect_to @book, notice: t("flash.notice.create") }
+      redirect_to @book, notice: t("flash.notice.create")
     else
-      format.html { render :new }
+      render :new
     end
   end
 
@@ -38,9 +38,9 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1.json
   def update
     if @book.update(book_params)
-      format.html { redirect_to @book, notice: t("flash.notice.update") }
+      redirect_to @book, notice: t("flash.notice.update")
     else
-      format.html { render :edit }
+      render :edit
     end
   end
 
@@ -48,7 +48,7 @@ class BooksController < ApplicationController
   # DELETE /books/1.json
   def destroy
     @book.destroy
-    format.html { redirect_to books_url, notice: t("flash.notice.destroy") }
+    redirect_to books_url, notice: t("flash.notice.destroy")
   end
 
   private
