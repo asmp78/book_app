@@ -1,0 +1,17 @@
+ja:
+  dictionary:
+    show: 詳細
+    edit: 編集
+    destroy: 削除
+    back: 戻る
+    new_book: 新規登録
+  flash:
+    notice:
+      create: 書籍の登録に成功しました。
+      update: 書籍の更新に成功しました。
+      destroy: 書籍の削除に成功しました。
+  helpers:
+    submit:
+      create: 登録
+      submit: 保存
+      update: 更新

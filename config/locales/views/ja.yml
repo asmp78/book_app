@@ -1,0 +1,10 @@
+ja:
+  books:
+    index:
+      title: 書籍一覧
+      confirm:
+        destroy: 本当に削除しますか？
+    new:
+      title: 新規登録
+    edit:
+      title: 書籍編集
