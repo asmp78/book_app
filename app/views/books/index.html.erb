@@ -27,7 +27,8 @@
     <% end %>
   </tbody>
 </table>
-
+<%= paginate @books %>
+<%= page_entries_info @books %> 
 <br>
-
+<br>
 <%= link_to t("dictionary.new_book"), new_book_path %>
