@@ -5,6 +5,15 @@ ja:
     destroy: 削除
     back: 戻る
     new_book: 新規登録
+  devise:
+    logged_in_html: "<b>%{email}</b>でログインしています。"
+    edit_profile: プロフィール編集
+    show_user: ユーザー確認
+    login: ログイン
+    logout: ログアウト
+    sign_up: サインアップ
+    sign_in: サインイン
+    profile: プロフィール
   flash:
     notice:
       create: 書籍の登録に成功しました。

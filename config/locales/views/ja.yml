@@ -1,7 +1,7 @@
 ja:
   books:
     index:
-      title: 書籍一覧
+      title: 書籍
       confirm:
         destroy: 本当に削除しますか？
     new:
