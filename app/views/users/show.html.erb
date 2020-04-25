@@ -1,0 +1,29 @@
+<h2><%= t("devise.profile",) %></h2>
+
+<p>
+  <strong><%= User.human_attribute_name(:name) %></strong><br/>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:email) %></strong><br/>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:postcode) %></strong><br/>
+  <%= @user.postcode %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:address) %></strong><br/>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:introduction) %></strong><br/>
+  <%= @user.introduction %>
+</p>
+
+<%= link_to t("dictionary.edit"), edit_user_registration_path %> |
+<%= link_to t("dictionary.back"), books_path %>

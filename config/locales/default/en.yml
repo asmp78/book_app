@@ -5,6 +5,15 @@ en:
     edit: Edit
     destroy: Destroy
     back: Back
+  devise:
+    logged_in_html: Logged in as <b>%{email}</b>.
+    edit_profile: Edit Profile
+    show_user: Show User
+    login: Login
+    logout: Logout
+    sign_up: Sign Up
+    sign_in: Sign In
+    prpfile: profile
   flash:
     notice:
       crate: Book was successfully created.
