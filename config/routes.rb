@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # get 'users/show'
+  devise_for :users, only: :omniauth_callbacks, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
+
   scope "(:locale)" do
-    resources :books
-    devise_for :users, controllers: {
-      sessions: "users/sessions",
+    devise_for :users, skip: :omniauth_callbacks, controllers: {
       registrations: "users/registrations"
     }
+    resources :books
     resources :users, only: [:show]
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "books#index"
 end
