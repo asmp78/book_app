@@ -3,8 +3,8 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div>  
-    <%= f.label :name %><br />  
+  <div>
+    <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
 
@@ -41,7 +41,12 @@
     <%= f.text_area :introduction %>  
   </div>
 
-  <div class="actions">
+  <div>
+    <%= f.label :avatar %><br />h
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="actions"><br />
     <%= f.submit t(".sign_up") %>
   </div>
 <% end %>
