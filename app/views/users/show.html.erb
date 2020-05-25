@@ -2,7 +2,7 @@
 
 <% if @user.avatar.attached? %>
   <p>
-    <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150]) %>
+    <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150]).processed %>
   </p>
 <% end %>
 
