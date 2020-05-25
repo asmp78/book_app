@@ -1,5 +1,11 @@
 <h2><%= t("devise.profile",) %></h2>
 
+<% if @user.avatar.attached? %>
+  <p>
+    <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150]).processed %>
+  </p>
+<% end %>
+
 <p>
   <strong><%= User.human_attribute_name(:name) %></strong><br/>
   <%= @user.name %>

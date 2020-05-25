@@ -10,3 +10,5 @@ en:
         updated_at: Updated at
         author: Author
         picture: Picture
+      user:
+        avatar: Profile Image
