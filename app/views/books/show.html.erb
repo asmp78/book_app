@@ -18,5 +18,10 @@
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
+<p>
+  <strong><%= t("dictionary.contributor") %>:</strong>
+  <%= link_to User.find_by(id: @book.user_id).name, user_path(id: @book.user_id) %>
+</p>
+
 <%= link_to t("dictionary.edit"), edit_book_path(@book) %> |
 <%= link_to t("dictionary.back"), books_path %>

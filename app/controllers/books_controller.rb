@@ -2,10 +2,11 @@
 
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   # GET /books
   def index
-    @books = Book.page(params[:page])
+    @books = Book.where(user_id: current_user.followings + [current_user]).page(params[:page])
   end
 
   # GET /books/1
@@ -23,7 +24,7 @@ class BooksController < ApplicationController
 
   # POST /books
   def create
-    @book = Book.new(book_params)
+    @book = current_user.books.new(book_params)
     if @book.save
       redirect_to @book, notice: t("flash.notice.create")
     else
@@ -55,5 +56,13 @@ class BooksController < ApplicationController
     # Only allow a list of trusted parameters through.
     def book_params
       params.require(:book).permit(:title, :memo, :author, :picture)
+    end
+
+    def ensure_correct_user
+      @book = Book.find_by(id: params[:id])
+      if @book.user_id != current_user.id
+        flash[:notice] = t("flash.notice.no_authorization")
+        redirect_to @book
+      end
     end
 end

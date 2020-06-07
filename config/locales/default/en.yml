@@ -5,6 +5,11 @@ en:
     edit: Edit
     destroy: Destroy
     back: Back
+    follow: Follow
+    unfollow: Unfollow
+    followings_html: "<b>%{count}</b> Following"
+    followers_html: "<b>%{count}</b> Followers"
+    contributor: Contributor
   devise:
     logged_in_html: Logged in as <b>%{email}</b>.
     edit_profile: Edit Profile
@@ -13,12 +18,13 @@ en:
     logout: Logout
     sign_up: Sign Up
     sign_in: Sign In
-    prpfile: profile
+    profile: Profile
   flash:
     notice:
       crate: Book was successfully created.
       update: Book was successfully updated.
       destroy: Book was successfully destroyed.
+      no_authorization: You have no authorization.
   helpers:
     submit:
       create: Create

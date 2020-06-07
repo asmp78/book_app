@@ -1,0 +1,2 @@
+$("#follow_form").html("<%= j(render "relationships/follow") %>");
+$("#followers").html('<%= link_to t("dictionary.followers_html", count: @user.followers.count), user_followers_path(@user) %>');
