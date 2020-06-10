@@ -20,7 +20,7 @@
 
 <p>
   <strong><%= t("dictionary.contributor") %>:</strong>
-  <%= link_to User.find_by(id: @book.user_id).name, user_path(id: @book.user_id) %>
+  <%= link_to @book.user.name, user_path(id: @book.user_id) %>
 </p>
 
 <%= link_to t("dictionary.edit"), edit_book_path(@book) %> |
