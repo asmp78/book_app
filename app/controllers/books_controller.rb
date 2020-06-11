@@ -59,7 +59,7 @@ class BooksController < ApplicationController
     end
 
     def ensure_correct_user
-      @book = Book.find_by(id: params[:id])
+      @book = Book.find(params[:id])
       if @book.user_id != current_user.id
         flash[:notice] = t("flash.notice.no_authorization")
         redirect_to @book
