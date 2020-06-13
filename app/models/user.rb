@@ -40,15 +40,15 @@ class User < ApplicationRecord
     update_attributes(params, *options)
   end
 
-  def follow(other_user)
-    active_relationships.create(followed_id: other_user.id)
+  def follow(user)
+    active_relationships.create(followed_id: user.id)
   end
 
-  def unfollow(other_user)
-    active_relationships.find_by(followed_id: other_user.id).destroy
+  def unfollow(user)
+    active_relationships.find_by(followed_id: user).destroy
   end
 
-  def following?(other_user)
-    followings.include?(other_user)
+  def following?(user)
+    followings.include?(user)
   end
 end
