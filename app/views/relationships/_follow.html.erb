@@ -1,4 +1,4 @@
-<%= form_with(model: current_user.active_relationships.build) do |f| %>
+<%= form_with(model: @new_relationship) do |f| %>
   <%= f.hidden_field :followed_id, value: @user.id %>
   <%= f.submit t("dictionary.follow") %>
 <% end %>
