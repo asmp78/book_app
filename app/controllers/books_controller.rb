@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show]
 
   # GET /books
   def index
@@ -19,6 +19,7 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
+    @book = current_user.books.find(params[:book_id])
   end
 
   # POST /books
@@ -33,7 +34,8 @@ class BooksController < ApplicationController
 
   # PATCH/PUT /books/1
   def update
-    if @book.update(book_params)
+    if @book = current_user.books.find(params[:book_id])
+      @book.update(book_params)
       redirect_to @book, notice: t("flash.notice.update")
     else
       render :edit
@@ -42,6 +44,7 @@ class BooksController < ApplicationController
 
   # DELETE /books/1
   def destroy
+    @book = current_user.books.find(params[:book_id])
     @book.destroy
     redirect_to books_url, notice: t("flash.notice.destroy")
   end
