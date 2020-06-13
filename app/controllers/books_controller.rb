@@ -2,7 +2,6 @@
 
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   # GET /books
   def index
@@ -56,13 +55,5 @@ class BooksController < ApplicationController
     # Only allow a list of trusted parameters through.
     def book_params
       params.require(:book).permit(:title, :memo, :author, :picture)
-    end
-
-    def ensure_correct_user
-      @book = Book.find(params[:id])
-      if @book.user_id != current_user.id
-        flash[:notice] = t("flash.notice.no_authorization")
-        redirect_to @book
-      end
     end
 end
