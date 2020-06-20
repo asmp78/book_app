@@ -8,7 +8,12 @@ Rails.application.routes.draw do
       registrations: "users/registrations"
     }
     resources :books
-    resources :users, only: [:show]
+    resources :users, only: [:index, :show]
+    resources :users do
+      resources :followings, only: [:index], controller: "users/followings"
+      resources :followers, only: [:index], controller: "users/followers"
+    end
+    resources :relationships, only: [:create, :destroy]
   end
   root to: "books#index"
 end

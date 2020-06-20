@@ -8,3 +8,12 @@ ja:
       title: 新規登録
     edit:
       title: 書籍編集
+  users:
+    index:
+      title: ユーザー一覧
+  followings: 
+    index:
+      title_html: "%{user}のフォロー"
+  followers: 
+    index:
+      title_html: "%{user}のフォロワー"

@@ -5,6 +5,11 @@ ja:
     destroy: 削除
     back: 戻る
     new_book: 新規登録
+    follow: フォロー
+    unfollow: フォロー解除
+    followings_html: "<b>%{count}</b> フォロー"
+    followers_html: "<b>%{count}</b> フォロワー"
+    contributor: 投稿者
   devise:
     logged_in_html: "<b>%{email}</b>でログインしています。"
     edit_profile: プロフィール編集
@@ -19,6 +24,7 @@ ja:
       create: 書籍の登録に成功しました。
       update: 書籍の更新に成功しました。
       destroy: 書籍の削除に成功しました。
+      no_authorization: 権限がありません。
   helpers:
     submit:
       create: 登録

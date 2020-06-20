@@ -1,0 +1,4 @@
+<%= form_with(model: @relationship, method: :delete) do |f| %>
+  <%= f.hidden_field :followed_id %>
+  <%= f.submit t("dictionary.unfollow") %>
+<% end %>

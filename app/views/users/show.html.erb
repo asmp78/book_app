@@ -1,9 +1,24 @@
-<h2><%= t("devise.profile",) %></h2>
+<h2><%= t("devise.profile") %></h2>
 
 <% if @user.avatar.attached? %>
   <p>
     <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150]).processed %>
   </p>
+<% end %>
+
+<p>
+  <span id="followings"><%= link_to t("dictionary.followings_html", count: @user.followings.count),user_followings_path(@user) %></span> |
+  <span id="followers"><%= link_to t("dictionary.followers_html", count: @user.followers.count), user_followers_path(@user) %></span>
+</p>
+
+<% unless @user == current_user %>
+<div id="follow_form"> 
+  <% if current_user.following?(@user) %>
+    <%= render "relationships/unfollow", user: @user, relationship: @relationship %>
+  <% else %>
+    <%= render "relationships/follow", user: @user, relationship: @new_relationship %>
+  <% end %>
+</div>
 <% end %>
 
 <p>

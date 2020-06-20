@@ -8,4 +8,12 @@ en:
       title: New Book
     edit:
       title: Editing Book
-
+  users:
+    index:
+      title: All Users
+  followings: 
+    index:
+      title_html: "%{user} Following"
+  followers: 
+    index:
+      title_html: "%{user} Followers"
