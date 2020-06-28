@@ -17,3 +17,21 @@ ja:
   followers: 
     index:
       title_html: "%{user}のフォロワー"
+  reports:
+    index:
+      title: 日報
+      confirm:
+        destroy: 本当に削除しますか？
+    new:
+      title: 日報作成
+    edit:
+      title: 日報編集
+  comments:
+    index:
+      title: コメント
+      confirm:
+        destroy: 本当に削除しますか？
+    new:
+      title: コメント投稿
+    edit:
+      title: コメント編集

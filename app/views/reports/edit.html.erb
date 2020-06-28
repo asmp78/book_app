@@ -1,0 +1,6 @@
+<h1><%= t(".title") %></h1>
+
+<%= render "form", report: @report %>
+
+<%= link_to t("dictionary.show"), @report %> |
+<%= link_to t("dictionary.edit"), reports_path %>

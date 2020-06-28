@@ -1,0 +1,27 @@
+<p>
+  <strong><%= Report.human_attribute_name(:title) %>:</strong>
+  <%= @report.title %>
+</p>
+
+<p>
+  <strong><%= Report.human_attribute_name(:body) %>:</strong>
+  <%= @report.body %>
+</p>
+
+<p>
+  <strong><%= t("dictionary.contributor") %>:</strong>
+  <%= link_to @report.user.name, user_path(id: @report.user_id) %>
+</p>
+<br>
+
+<h2><%= t("comments.index.title") %></h2>
+<%= render "comments/comments", commentable: @report %>
+<br>
+
+<h2><%= t("comments.new.title") %></h2>
+<%= render "comments/form", commentable: @report, comment: @report.comments.new %>
+
+<% if @report.user_id == current_user.id %>
+  <%= link_to t("dictionary.edit"), edit_report_path(@report) %> |
+<% end %>
+<%= link_to t("dictionary.back"), reports_path %>

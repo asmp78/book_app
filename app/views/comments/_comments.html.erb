@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= t("dictionary.contributor") %></th>
+      <th><%= Comment.human_attribute_name(:body) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= link_to comment.user.name, user_path(id: comment.user_id) %></td>
+        <td><%= comment.body %></td>
+        <% if comment.user_id == current_user.id %>
+          <td><%= link_to t("dictionary.edit"), edit_polymorphic_path([commentable, comment]) %></td>
+          <td><%= link_to t("dictionary.destroy"), polymorphic_path([commentable, comment]), method: :delete, data: { confirm: t("comments.index.confirm.destroy") } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
