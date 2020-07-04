@@ -10,6 +10,7 @@ ja:
     followings_html: "<b>%{count}</b> フォロー"
     followers_html: "<b>%{count}</b> フォロワー"
     contributor: 投稿者
+    new_report: 日報作成
   devise:
     logged_in_html: "<b>%{email}</b>でログインしています。"
     edit_profile: プロフィール編集
@@ -21,10 +22,18 @@ ja:
     profile: プロフィール
   flash:
     notice:
-      create: 書籍の登録に成功しました。
-      update: 書籍の更新に成功しました。
-      destroy: 書籍の削除に成功しました。
-      no_authorization: 権限がありません。
+      book:
+        create: 書籍の登録に成功しました。
+        update: 書籍の更新に成功しました。
+        destroy: 書籍の削除に成功しました。
+      report:
+        create: 日報の登録に成功しました。
+        update: 日報の更新に成功しました。
+        destroy: 日報の削除に成功しました。
+      comment:
+        create: コメントの登録に成功しました。
+        update: コメントの更新に成功しました。
+        destroy: コメントの削除に成功しました。
   helpers:
     submit:
       create: 登録

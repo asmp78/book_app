@@ -7,7 +7,12 @@ Rails.application.routes.draw do
     devise_for :users, skip: :omniauth_callbacks, controllers: {
       registrations: "users/registrations"
     }
-    resources :books
+    resources :books do
+      resources :comments, only: [:create, :edit, :update, :destroy], module: :books
+    end
+    resources :reports do
+      resources :comments, only: [:create, :edit, :update, :destroy], module: :reports
+    end
     resources :users, only: [:index, :show]
     resources :users do
       resources :followings, only: [:index], controller: "users/followings"

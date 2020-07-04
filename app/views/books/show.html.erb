@@ -22,6 +22,14 @@
   <strong><%= t("dictionary.contributor") %>:</strong>
   <%= link_to @book.user.name, user_path(id: @book.user_id) %>
 </p>
+<br>
+
+<h2><%= t("comments.index.title") %></h2>
+<%= render "comments/comments", commentable: @book %>
+<br>
+
+<h2><%= t("comments.new.title") %></h2>
+<%= render "comments/form", commentable: @book, comment: @book.comments.new %>
 
 <% if @book.user_id == current_user.id %>
   <%= link_to t("dictionary.edit"), edit_book_path(@book) %> |

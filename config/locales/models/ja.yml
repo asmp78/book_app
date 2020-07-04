@@ -3,6 +3,8 @@ ja:
     models:
       book: 書籍
       user: ユーザー
+      report: 日報
+      comment: コメント
     attributes: 
       book:
         title: タイトル
@@ -18,3 +20,8 @@ ja:
         address: 住所
         introduction: 自己紹介
         avatar: プロフィール画像
+      report:
+        title: タイトル
+        body: 内容
+      comment:
+        body: 内容

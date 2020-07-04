@@ -21,10 +21,18 @@ en:
     profile: Profile
   flash:
     notice:
-      crate: Book was successfully created.
-      update: Book was successfully updated.
-      destroy: Book was successfully destroyed.
-      no_authorization: You have no authorization.
+      book:
+        crate: Book was successfully created.
+        update: Book was successfully updated.
+        destroy: Book was successfully destroyed.
+      report:
+        crate: Report was successfully created.
+        update: Report was successfully updated.
+        destroy: Report was successfully destroyed.  
+      comment:
+        crate: Comment was successfully created.
+        update: Comment was successfully updated.
+        destroy: Comment was successfully destroyed. 
   helpers:
     submit:
       create: Create

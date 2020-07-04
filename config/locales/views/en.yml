@@ -10,10 +10,28 @@ en:
       title: Editing Book
   users:
     index:
-      title: All Users
+      title: Users
   followings: 
     index:
       title_html: "%{user} Following"
   followers: 
     index:
       title_html: "%{user} Followers"
+  reports:
+    index:
+      title: Reports
+      confirm:
+        destroy: Are you sure?
+    new:
+      title: New Report
+    edit:
+      title: Editing Report
+  comments:
+    index:
+      title: Comment
+      confirm:
+        destroy: Are you sure?
+    new:
+      title: New Comment
+    edit:
+      title: Editing Comment

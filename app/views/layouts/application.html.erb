@@ -20,7 +20,9 @@
       <% if user_signed_in? %>
         <%= t("devise.logged_in_html", email: current_user.email) %>
         <%= link_to t("devise.profile"), user_path(id: current_user.id) %> |
-        <%= link_to "ユーザー一覧", users_path %> |
+        <%= link_to t("books.index.title"), books_path %> |
+        <%= link_to t("reports.index.title"), reports_path %> |
+        <%= link_to t("users.index.title"), users_path %> |
         <%= link_to t("devise.logout"), destroy_user_session_path, method: :delete %>
       <% end %>
     </p>
