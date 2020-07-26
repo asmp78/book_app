@@ -39,7 +39,7 @@ class User < ApplicationRecord
     end
 
     clean_up_passwords
-    update_attributes(params, *options)
+    update(params, *options)
   end
 
   def follow(user)
