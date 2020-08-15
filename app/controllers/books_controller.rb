@@ -45,7 +45,7 @@ class BooksController < ApplicationController
 
   # DELETE /books/1
   def destroy
-    @book = current_user.books.find(params[:book_id])
+    @book = current_user.books.find(params[:id])
     @book.destroy
     redirect_to books_url, notice: t("flash.notice.book.destroy")
   end

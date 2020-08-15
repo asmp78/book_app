@@ -1,0 +1,17 @@
+one:
+  name: "Franny"
+  email: "franny@example.com"
+  uid: "12345"
+  provider: "github"
+
+two:
+  name: "Zooey"
+  email: "zooey@example.com"
+  uid: "2"
+  provider: ""
+
+three:
+  name: "Holeden"
+  email: "holeden@example.com"
+  uid: "3"
+  provider: ""
